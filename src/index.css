@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.container {
+  margin: 1rem;
+  text-align: center;
+}
+
 .nav {
   background-color: #333;
   color:bisque;
@@ -34,6 +39,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 0.25rem;
 }
 
 .nav li.active {
@@ -41,7 +47,7 @@ body {
 }
 
 .nav li:hover {
-  background-color: #555;
+  background-color: #666;
 }
 
 

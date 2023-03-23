@@ -3,31 +3,21 @@ import Dashboard from "./pages/Dashboard";
 import Games from "./pages/Games";
 import Markteplace from "./pages/Marketplace";
 import BattlePass from "./pages/BattlePass";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  let component
-  switch (window.location.pathname) {
-    case "/":
-      component = <Dashboard />
-      break
-    case "/dashboard":
-        component = <Dashboard />
-        break
-    case "/games":
-      component = <Games />
-      break
-    case "/marketplace":
-      component = <Markteplace />
-      break
-    case "/battlepass":
-      component = <BattlePass />
-      break
-  }
-
   return (
     <>
       <Navbar />
-      {component}
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/marketplace" element={<Markteplace />} />
+          <Route path="/battlepass" element={<BattlePass />} />
+        </Routes>
+      </div>
     </>
   )
 }
